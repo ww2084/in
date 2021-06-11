@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;;
+    font-size: 16px;
+    background: #666;
+}
+
+ul {
+    list-style-type: none;
+   
+}
+
+a{
+    text-decoration: none;
+}
+
+#main_header {
+    position: relative;
+    background: #000;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+#gnb {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+}
+
+#gnb > ul > li.event {
+    background: #1860c9;
+}
+
+#gnb > ul > li.event > a > span {
+    margin-left: 1em;
+}
+
+#gnb > ul > li {
+    float: left;
+    width: 150px;
+    padding: 5px 0;
+    /*outline: 1px solid red;*/
+    font-size: 14px;
+    text-align: center;
+}
+
+#gnb > ul > li > a {
+    color: #fff;
+    text-transform: uppercase;
+  
+    display: block;
+    
+}
+
+/*2단계메뉴 구현*/
+
+#gnb .depth2 {
+    /*background: #ccc;*/
+    margin-top: 15px;
+    padding: 10px;
+    display: none; /*기본은 비표시*/
+}
+
+ /* 1단계 메뉴가 hover시 후손 .depth2가 표시 */
+ #gnb > ul > li:hover > .depth2 {
+    display: block;
+}
+
+#gnb .depth2 > li {
+    padding: 5px;
+}
+
+#gnb .depth2 > li > a {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/*1단계 메뉴 hover시 밑줄*/
+#gnb > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+#gnb > ul > li:last-child > a:hover { 
+    /*마지막 메뉴는 밑줄빼기 라스트차일드속성*/
+    text-decoration: none;
+}
+
+/* 2단계 메뉴 hover시 텍스트 하이트라이 효과(반투명)*/
+#gnb .depth2 > li > a:hover {
+    /* 글자색 : 흰색, 불투명도 75%(0.75) */
+ color: rgba(255, 255, 255, 0.75);
+}
+
+section {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+#disney {
+    background-image:url(./imges/bg-d.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.section_nav > ul > li {
+    display: inline-block;
+    color: #fff;
+}
+
+.section_nav > ul > li > a {
+    color:#fff;
+    
+} 
+
+.section_nav > ul > li > span {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 13px;
+}
+
+.section_group {
+    padding-top: 170px;
+}
+
+#marvel {
+    background-image:url(./imges/bg-m.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#starwars {
+    background-image:url(./imges/bg-s.jpg);
+    background-size: cover;
+    background-position: center center;
+}
